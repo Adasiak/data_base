@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A29A3E1E-2065-3999-F4A3-F6D5C59693B1" name="personel">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-04 19:50:21 UTC</createdTime>
+<ownerDesignName>klinika</ownerDesignName>
+<engineerTo>
+<item key="2A5E84D8-F762-9DBD-BAB2-CBB38CFA1526" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ward_id" id="7CC30D35-AFDE-3F4A-B4E2-7B46F631C914">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-04 20:09:04 UTC</createdTime>
+<ownerDesignName>klinika</ownerDesignName>
+<engineerTo>
+<item key="2A5E84D8-F762-9DBD-BAB2-CBB38CFA1526" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="personel_id" id="DFEAF652-29FF-A864-EE1D-B2444CF3C3A1">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-04 19:50:36 UTC</createdTime>
+<ownerDesignName>klinika</ownerDesignName>
+<engineerTo>
+<item key="2A5E84D8-F762-9DBD-BAB2-CBB38CFA1526" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="position" id="A345C83F-F9C4-EDEB-7333-192911B73435">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-04 20:09:35 UTC</createdTime>
+<ownerDesignName>klinika</ownerDesignName>
+<engineerTo>
+<item key="2A5E84D8-F762-9DBD-BAB2-CBB38CFA1526" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="5EA3C8E7-E627-299F-A706-18361705F1CD">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-04 19:50:54 UTC</createdTime>
+<ownerDesignName>klinika</ownerDesignName>
+<engineerTo>
+<item key="2A5E84D8-F762-9DBD-BAB2-CBB38CFA1526" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sure_name" id="9DC78DE8-4264-8D57-6B5B-ECF51EF0FDE9">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-04 20:07:51 UTC</createdTime>
+<ownerDesignName>klinika</ownerDesignName>
+<engineerTo>
+<item key="2A5E84D8-F762-9DBD-BAB2-CBB38CFA1526" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="phone_number" id="F87322F3-83E7-CF6C-6642-A833C9DD24E9">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-04 20:08:06 UTC</createdTime>
+<ownerDesignName>klinika</ownerDesignName>
+<engineerTo>
+<item key="2A5E84D8-F762-9DBD-BAB2-CBB38CFA1526" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="81E2EAF8-9B79-0721-F710-8424F6F4E560">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-04 20:08:23 UTC</createdTime>
+<ownerDesignName>klinika</ownerDesignName>
+<engineerTo>
+<item key="2A5E84D8-F762-9DBD-BAB2-CBB38CFA1526" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="adres" id="A208F19D-F557-7E26-6117-3BE54F9D0C5D">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-04 20:08:39 UTC</createdTime>
+<ownerDesignName>klinika</ownerDesignName>
+<engineerTo>
+<item key="2A5E84D8-F762-9DBD-BAB2-CBB38CFA1526" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="05656449-9618-4158-3C29-7C3B3BF2666A" name="Key_1">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-04 20:15:36 UTC</createdTime>
+<ownerDesignName>klinika</ownerDesignName>
+<engineerTo>
+<item key="2A5E84D8-F762-9DBD-BAB2-CBB38CFA1526" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>DFEAF652-29FF-A864-EE1D-B2444CF3C3A1</newElementsIDs>
+<usedAttributes>
+<attributeRef>DFEAF652-29FF-A864-EE1D-B2444CF3C3A1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
