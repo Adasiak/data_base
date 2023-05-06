@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="80550B61-B8D7-EBCA-7F81-F8775B070B4F" name="patient">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-04 19:39:38 UTC</createdTime>
+<ownerDesignName>kilinka1</ownerDesignName>
+<engineerTo>
+<item key="2A5E84D8-F762-9DBD-BAB2-CBB38CFA1526" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="patient_id" id="166B9C69-32E0-2E19-A863-FC3B7DEB5527">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-04 19:46:00 UTC</createdTime>
+<ownerDesignName>kilinka1</ownerDesignName>
+<engineerTo>
+<item key="2A5E84D8-F762-9DBD-BAB2-CBB38CFA1526" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="A6EBC058-1649-B1ED-55D3-D1A59CD76F8F">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-04 19:46:46 UTC</createdTime>
+<ownerDesignName>kilinka1</ownerDesignName>
+<engineerTo>
+<item key="2A5E84D8-F762-9DBD-BAB2-CBB38CFA1526" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sure_name" id="E7B9AA03-6C7E-7F84-BA3C-251D21FBFF94">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-04 19:47:06 UTC</createdTime>
+<ownerDesignName>kilinka1</ownerDesignName>
+<engineerTo>
+<item key="2A5E84D8-F762-9DBD-BAB2-CBB38CFA1526" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="8FE5030A-4C7A-2AF0-1B84-CDB8D7A5F374">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-04 19:47:35 UTC</createdTime>
+<ownerDesignName>kilinka1</ownerDesignName>
+<engineerTo>
+<item key="2A5E84D8-F762-9DBD-BAB2-CBB38CFA1526" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="residence_hall" id="51DE1FFC-A1C2-0F02-FA02-CE8035F5B0E4">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-04 19:47:52 UTC</createdTime>
+<ownerDesignName>kilinka1</ownerDesignName>
+<engineerTo>
+<item key="2A5E84D8-F762-9DBD-BAB2-CBB38CFA1526" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Ward_id1" id="43E0B297-052F-F03F-E80E-D5481E409DB8">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:36:28 UTC</createdTime>
+<generatorID>52B0FA2E-AFC7-36B5-BDDF-2EA439502B1B</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<engineerTo>
+<item key="2A5E84D8-F762-9DBD-BAB2-CBB38CFA1526" value="true"/>
+</engineerTo>
+<referedAttribute>7EE1EA7D-96D7-6DF6-C82E-23C1D632D4B7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="36D855F4-68D6-7C33-C461-946A82F19A4F" name="Key_1">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-04 20:16:00 UTC</createdTime>
+<ownerDesignName>kilinka1</ownerDesignName>
+<engineerTo>
+<item key="2A5E84D8-F762-9DBD-BAB2-CBB38CFA1526" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>166B9C69-32E0-2E19-A863-FC3B7DEB5527</newElementsIDs>
+<usedAttributes>
+<attributeRef>166B9C69-32E0-2E19-A863-FC3B7DEB5527</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

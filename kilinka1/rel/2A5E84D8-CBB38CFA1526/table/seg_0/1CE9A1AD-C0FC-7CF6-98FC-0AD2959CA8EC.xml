@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1CE9A1AD-C0FC-7CF6-98FC-0AD2959CA8EC" name="patient">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>80550B61-B8D7-EBCA-7F81-F8775B070B4F</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="patient_id" id="9C8C2614-42C3-F4EA-5846-0030D977A07C">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>166B9C69-32E0-2E19-A863-FC3B7DEB5527</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="6A356F92-9039-180D-DD3B-3D42D06AC3D9">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>A6EBC058-1649-B1ED-55D3-D1A59CD76F8F</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sure_name" id="8E56678E-0BEB-D295-0072-1EE2BB58246C">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>E7B9AA03-6C7E-7F84-BA3C-251D21FBFF94</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="8EF9F791-091C-8FF9-D4FB-165280C07805">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>8FE5030A-4C7A-2AF0-1B84-CDB8D7A5F374</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="residence_hall" id="3BAF97E6-3E9B-99CA-B507-472EF65FB053">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>51DE1FFC-A1C2-0F02-FA02-CE8035F5B0E4</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Ward_Ward_id" id="044D5FBD-2F56-BBFF-DCC1-7003E30D0BCC">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>43E0B297-052F-F03F-E80E-D5481E409DB8</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B06ECF4C-C610-F83F-25F1-61C32A2D9B73" referredColumn="0B31D46A-EF22-0710-33C7-1761056B6E45"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B2F3487B-8B61-C606-0452-E07613C1E2A4" name="patient_PK">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>36D855F4-68D6-7C33-C461-946A82F19A4F</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9C8C2614-42C3-F4EA-5846-0030D977A07C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3C69E4F7-D988-7180-A623-75D8FB5342EF" name="patient_Ward_FK">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>52B0FA2E-AFC7-36B5-BDDF-2EA439502B1B</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="044D5FBD-2F56-BBFF-DCC1-7003E30D0BCC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

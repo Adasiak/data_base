@@ -1,0 +1,123 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1431023A-2EFA-05C3-5E30-0572A25E847E" name="surgery">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>49FBD843-08B3-99D3-E284-241D23B64CBE</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="surgery_id" id="3FFE8CEF-8711-0306-DC80-493AB8BB7228">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>53E8BEBB-4FD9-39E7-0CEC-AEB8B0D8C839</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="surgery_room" id="36B9F93A-2B91-8332-BA43-861AD1921A41">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>73422C94-1C2C-E5AB-75EF-B58C11404CE6</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="date" id="2591C8D3-BC27-027A-3DF4-B7B3F0E5F4D4">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>6087A8ED-08CB-B5D8-8F1E-E7ECA8AFFEA0</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name_of_surgery" id="DDB41EFC-696E-A903-D5B6-1C738FE76F5A">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>C2374E83-F5D1-389B-E2BD-1907E42E3070</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="personel_personel_id" id="79381AD8-C730-322B-8B08-607D9A6974D6">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>0371A6C5-25AA-BB6B-AE74-3569C81BC7C3</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="26250213-8E42-598C-4A7F-9AF8D40FCD6B" referredColumn="85150FD0-32D9-D9B2-C2A6-A662F2C0C012"/>
+</associations>
+</Column>
+<Column name="patient_patient_id" id="B66D6E56-5701-A59A-7BD0-705655DB8B68">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>86E23460-ED79-B519-3E41-E8A10F5C66A0</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1D95EDD7-0759-BA26-602C-407E8606EE1F" referredColumn="9C8C2614-42C3-F4EA-5846-0030D977A07C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C62D8948-D18E-ABAA-214D-46A2D17DD394" name="surgery_PK">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>EF65F4B8-0A9B-325E-27B4-AA1AC360443A</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3FFE8CEF-8711-0306-DC80-493AB8BB7228"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="56A1AEA3-532D-440B-58E8-6D17F92E981D" name="surgery_personel_FK">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>E2B38156-8894-9992-2B04-F8154E39DC1D</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="79381AD8-C730-322B-8B08-607D9A6974D6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DF71A189-F0B0-8C93-B233-5B48006164C6" name="surgery_patient_FK">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>4044DB42-0DC3-3673-DFEE-07325EA1AEFF</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B66D6E56-5701-A59A-7BD0-705655DB8B68"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
