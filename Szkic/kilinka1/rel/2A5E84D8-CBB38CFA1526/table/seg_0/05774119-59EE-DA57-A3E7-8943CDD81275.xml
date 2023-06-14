@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="05774119-59EE-DA57-A3E7-8943CDD81275" name="personel">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>A29A3E1E-2065-3999-F4A3-F6D5C59693B1</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="personel_id" id="85150FD0-32D9-D9B2-C2A6-A662F2C0C012">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>DFEAF652-29FF-A864-EE1D-B2444CF3C3A1</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="position" id="E7F85F23-40F5-063B-4A1E-30B231E663BE">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>A345C83F-F9C4-EDEB-7333-192911B73435</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="DEF32AFD-3C6A-E152-EEA0-543D0C8D7582">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>5EA3C8E7-E627-299F-A706-18361705F1CD</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sure_name" id="F524D262-34D0-FFCB-6022-FB48BCC94F63">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>9DC78DE8-4264-8D57-6B5B-ECF51EF0FDE9</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="phone_number" id="9204853D-7240-AE3A-55C2-6EED927E0610">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>F87322F3-83E7-CF6C-6642-A833C9DD24E9</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="327C5C2E-EB80-9A03-696D-DAD56ADC0FA9">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>81E2EAF8-9B79-0721-F710-8424F6F4E560</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="adres" id="7973E0D3-ADD5-902B-9812-C13A31ABBDE8">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>A208F19D-F557-7E26-6117-3BE54F9D0C5D</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ward_ward_id" id="D980A6F3-A6E9-B14E-550F-3AF00559AE82">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>3E8F40F4-BD93-94B6-3692-94FC1F473E00</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="41AAA9D3-C416-4AF9-3B0E-911313ED42E1" referredColumn="0B31D46A-EF22-0710-33C7-1761056B6E45"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A6EB564D-0038-A9E1-02F1-9FC3A8DE0CF1" name="personel_PK">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>05656449-9618-4158-3C29-7C3B3BF2666A</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="85150FD0-32D9-D9B2-C2A6-A662F2C0C012"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FAD6FDC0-5558-A387-7202-F29846B50441" name="personel_Ward_FK">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:34 UTC</createdTime>
+<generatorID>EED229C6-D94A-2680-A2C6-95A4A6590ACE</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D980A6F3-A6E9-B14E-550F-3AF00559AE82"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

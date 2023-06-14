@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Edit Ward
+{% endblock title %}
+
+{% block body %}
+
+<div class="row">
+
+<div class="col-md-4">
+</div>
+
+<div class="col-md-4">
+<br>
+
+<h4 class="text-center bg-success text-white">Update Ward Info</h4>
+<br>
+
+
+<form action="/edit_wards/{{posts.ward_id}}" method="post" class="jumbotron">
+
+ 
+  <div class="form-group">
+
+    <input type="text" class="form-control" value={{posts.ward_name}} name="ward_name" placeholder="Ward Name" required>
+  
+  </div>
+
+  <div class="form-group">
+  
+    <input type="text" class="form-control" id="building" name="building" value={{posts.building}} placeholder="Building" required>
+  
+  </div>
+
+  <div class="form-group">
+
+    <input type="number" class="form-control" value={{posts.floor}}  id="floor" name="floor" placeholder="Floor" required>
+  
+  </div>
+
+  <div class="form-group">
+
+    <input type="text" class="form-control" value={{posts.phone_number}}  id="phone_number" name="phone_number" placeholder="Phone Number" required>
+  
+  </div>
+
+  <div class="form-group">
+
+    <input type="number" class="form-control" value={{posts.int_of_free_beds}}  id="int_of_free_beds" name="phone_number" placeholder="Free Beds" required>
+  
+  </div>
+
+  <div class="form-group">
+
+    <input type="number" class="form-control" value={{posts.maximum_capacity}}  id="maximum_capacity" name="maximum_capacity" placeholder="Maximum Capacity" required>
+  
+  </div>
+
+  <div class="form-group">
+
+    <input type="number" class="form-control" value={{posts.hospital_hospital_id}}  id="hospital_hospital_id" name="hospital_hospital_id" placeholder="Hospital Id" required>
+  
+  </div>
+  
+  <button type="submit" class="btn btn-warning btn-sm btn-block">Update</button>
+</form>
+
+
+
+
+</div>
+
+
+
+{% endblock body %}

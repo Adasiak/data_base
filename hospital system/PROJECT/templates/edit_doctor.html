@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Edit Doctor
+{% endblock title %}
+
+{% block body %}
+
+<div class="row">
+
+<div class="col-md-4">
+</div>
+
+<div class="col-md-4">
+<br>
+
+<h4 class="text-center bg-success text-white">Update Doctor Info</h4>
+<br>
+
+
+<form action="/edit_doctor/{{posts.did}}" method="post" class="jumbotron">
+
+  <div class="form-group">
+
+    <input type="email" class="form-control" id="email" value={{posts.email}} name="email" required>
+  
+  </div>
+
+  <div class="form-group">
+  
+    <input type="text" class="form-control" id="doctorname" name="doctorname" value={{posts.doctorname}} placeholder="Doctor Name" required>
+  
+  </div>
+
+  <div class="form-group">
+
+    <input type="text" class="form-control" value={{posts.dept}}  id="dept" name="dept" placeholder="Doctor Dept" required>
+  
+  </div>
+
+  <div class="form-group">
+
+    <input type="number" class="form-control" value={{posts.ward_ward_id}}  id="ward_ward_id" name="ward_ward_id" placeholder="Ward ID" required>
+  
+  </div>
+
+  
+  <button type="submit" class="btn btn-warning btn-sm btn-block">Update</button>
+</form>
+
+
+
+
+</div>
+
+
+
+{% endblock body %}

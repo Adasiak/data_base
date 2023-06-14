@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0B9DBDEA-2676-E4BC-FD92-A623A055ECE4" name="hospital">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:33 UTC</createdTime>
+<generatorID>795A3265-BE75-939D-079B-C1ED2E52E14A</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="hospital_id" id="B2093093-7F83-BB39-6A5F-A8534EDF3239">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:33 UTC</createdTime>
+<generatorID>C0153B2B-EB28-3C68-BC7A-6A008197CB1E</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hospital_name" id="238940BF-BB51-5592-B939-76E1CFB24159">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:33 UTC</createdTime>
+<generatorID>4CEAFE42-CBBE-87E4-D2B0-135474978C8D</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="adres" id="2927FBF7-4DD1-82C9-FA06-B48CE734F788">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:33 UTC</createdTime>
+<generatorID>8766C108-0274-1BE7-08A1-070B001C0903</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="phone_number" id="5184FB0F-D933-B599-C0EC-7BFE3E0B0DAF">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:33 UTC</createdTime>
+<generatorID>5E14472C-E9D0-D1B5-1D0B-5E90C2033E15</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="1160D2FC-847A-61D9-E980-24A032B73E72">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:33 UTC</createdTime>
+<generatorID>489C9631-EA99-5A1F-9D10-332A4949F2AB</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5DF4B4AA-1572-9FB5-CC67-67250AF2A04F" name="Hospital_PK">
+<createdBy>adasiak</createdBy>
+<createdTime>2023-05-06 13:45:33 UTC</createdTime>
+<generatorID>0AB9D947-98D9-6C96-52EE-E2528E404655</generatorID>
+<ownerDesignName>kilinka1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B2093093-7F83-BB39-6A5F-A8534EDF3239"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

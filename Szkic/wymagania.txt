@@ -1,0 +1,16 @@
+Wymagania funkcjonalne:
+System powinien umożliwić dodawanie, modyfikowanie i usuwanie informacji o pacjentach, personelu, oddziałach szpitalnych oraz zabiegach chirurgicznych.
+System powinien umożliwić przypisywanie pacjentów do konkretnych oddziałów szpitalnych oraz personelu odpowiedzialnego za ich opiekę.
+System powinien umożliwić zapisywanie informacji o zabiegach chirurgicznych, w tym nazwy zabiegu, daty wykonania, informacji o pacjencie i personelu medycznym.
+System powinien umożliwić przeszukiwanie informacji o pacjentach, personelu, oddziałach szpitalnych oraz zabiegach chirurgicznych za pomocą określonych kryteriów wyszukiwania.
+Wymagania niefunkcjonalne:
+System powinien być łatwy w obsłudze i intuicyjny dla użytkowników, w tym lekarzy, pielęgniarek i administratorów.
+System powinien zapewniać wysoką dostępność i niezawodność, aby umożliwić ciągłą pracę placówki medycznej.
+System powinien zapewnić bezpieczeństwo danych, w tym poufność informacji medycznych pacjentów oraz zabezpieczenia przed nieuprawnionym dostępem do bazy danych.
+System powinien działać na różnych platformach sprzętowych i systemach operacyjnych, aby umożliwić użytkowanie w różnych środowiskach.
+System powinien zapewnić wydajność i szybkość przetwarzania danych, aby zapewnić szybką reakcję na żądania użytkowników i umożliwić skuteczne zarządzanie placówką medyczną.
+
+
+Baza danych została stworzona w poprawny sposób co umożliwiło późniejsze operacje na niej. 
+Dzięki stworzeniu skryptów pomocniczych późniejszy rozwój aplikacji będzie znacznie łatwiejszy oraz sama obsługa bazy danych staje się mniej skomplikowana dla osoby mniej doświadczonej. 
+Przez problemy techniczne strony Apex nie byłem w stanie dodać inny użytkowników.

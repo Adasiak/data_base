@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Booking
+{% endblock title %}
+
+{% block body %}
+{% with messages=get_flashed_messages(with_categories=true) %}
+{% if messages %}
+{% for category, message in messages %}
+
+<div class="alert alert-{{category}} alert-dismissible fade show" role="alert">
+    {{message}}
+
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+
+  {% endfor %}
+  {% endif %}
+  {% endwith %}
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">NAME</th>
+      <th scope="col">BUILDING</th>
+      <th scope="col">FLOOR</th>
+      <th scope="col">PHONE NUMBER</th>
+      <th scope="col">FREE BEDS</th>
+      <th scope="col">MAXIMUM CAPACITY</th>
+      <th scope="col">HOSPITAL ID</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for post in query %}
+    <tr>
+      <th scope="row">{{post.ward_id}}</th>
+      <td>{{post.ward_name}}</td>
+      <td>{{post.building}}</td>
+      <td>{{post.floor}}</td>
+      <td>{{post.phone_number}}</td>
+      <td>{{post.int_of_free_beds}}</td>
+      <td>{{post.maximum_capacity}}</td>
+      <td>{{post.hospital_hospital_id}}</td>
+    <td><a href="/edit_wards/{{post.ward_id}}"><button class="btn btn-success">Edit </button> </a> </td>
+    </tr>
+{% endfor %}
+  
+  </tbody>
+</table>
+
+<div class="text-center text-white">
+  <a href="/add_wards">
+      <button class="btn btn-primary">Add Wards</button>
+  </a>
+</div>
+
+
+{% endblock body %}

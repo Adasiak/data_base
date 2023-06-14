@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<oracle.dbtools.crest.model.design.logical.LogicalDesign>
-   <object objectType="Entity" objectID="795A3265-BE75-939D-079B-C1ED2E52E14A" name="Hospital" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="5ED0C130-51BA-67F0-27DA-464037EE2D88" propertySourceId="" propertyTargetId=""/>
-   <object objectType="Entity" objectID="80550B61-B8D7-EBCA-7F81-F8775B070B4F" name="patient" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="5ED0C130-51BA-67F0-27DA-464037EE2D88" propertySourceId="" propertyTargetId=""/>
-   <object objectType="Entity" objectID="A29A3E1E-2065-3999-F4A3-F6D5C59693B1" name="personel" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="5ED0C130-51BA-67F0-27DA-464037EE2D88" propertySourceId="" propertyTargetId=""/>
-   <object objectType="Entity" objectID="49FBD843-08B3-99D3-E284-241D23B64CBE" name="surgery" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="5ED0C130-51BA-67F0-27DA-464037EE2D88" propertySourceId="" propertyTargetId=""/>
-   <object objectType="Entity" objectID="34748310-5ED0-FB96-83B2-E7EFBA9054F7" name="Ward" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="5ED0C130-51BA-67F0-27DA-464037EE2D88" propertySourceId="" propertyTargetId=""/>
-</oracle.dbtools.crest.model.design.logical.LogicalDesign>
