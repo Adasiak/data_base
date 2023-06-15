@@ -1,12 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 5.0.2
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Jan 22, 2021 at 11:52 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.2.29
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -24,7 +15,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `doctors`
+-- Table structure for table `hospital`
 --
 CREATE TABLE hospital (
     `hospital_id`   int NOT NULL,
@@ -39,9 +30,12 @@ ALTER TABLE hospital ADD CONSTRAINT hospital_pk PRIMARY KEY ( hospital_id );
 ALTER TABLE `hospital`
   MODIFY `hospital_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
-INSERT INTO hospital (hospital_id, hospital_name, adres, phone_number, email) VALUES (1, 'Szpital Wojewódzki', 'ul. Szpitalna 1, 00-001 Warszawa', '+48 22 123 45 67', 'szpitalwojewodzki@example.com');
-INSERT INTO hospital (hospital_id, hospital_name, adres, phone_number, email) VALUES (2, 'Szpital Miejski', 'ul. Wojska Polskiego 1, 00-001 Warszawa', '+48 22 987 65 43', 'szpitalmiejski@example.com');
+INSERT INTO hospital (hospital_id, hospital_name, adres, phone_number, email) VALUES (1, 'Wojewódzki', 'ul.Szpitalna1,00-001Warszawa', '+48221234567', 'szpitalwojewodzki@example.com');
+INSERT INTO hospital (hospital_id, hospital_name, adres, phone_number, email) VALUES (2, 'Miejski', 'ul.WojskaPolskiego1,00-001Warszawa', '+48229876543', 'szpitalmiejski@example.com');
 
+--
+-- Table structure for table `ward`
+--
 
 CREATE TABLE ward (
     `ward_id`              int NOT NULL,
@@ -64,8 +58,8 @@ ALTER TABLE `ward`
   MODIFY `ward_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 
-INSERT INTO ward (ward_id, ward_name, building, floor, phone_number, int_of_free_beds, maximum_capacity, hospital_hospital_id) VALUES (1, 'Oddział Chirurgiczny', 'Budynek A', 2, '+48 22 111 11 11', 10, 20, 1);
-INSERT INTO ward (ward_id, ward_name, building, floor, phone_number, int_of_free_beds, maximum_capacity, hospital_hospital_id) VALUES (2, 'Oddział Pediatryczny', 'Budynek B', 3, '+48 22 222 22 22', 15, 25, 2);
+INSERT INTO ward (ward_id, ward_name, building, floor, phone_number, int_of_free_beds, maximum_capacity, hospital_hospital_id) VALUES (1, 'Chirurgiczny', 'A', 2, '+48221111111', 10, 20, 1);
+INSERT INTO ward (ward_id, ward_name, building, floor, phone_number, int_of_free_beds, maximum_capacity, hospital_hospital_id) VALUES (2, 'Pediatryczny', 'B', 3, '+48222222222', 15, 25, 2);
 
 
 CREATE TABLE `doctors` (
@@ -122,15 +116,15 @@ ALTER TABLE patients
 --
 
 INSERT INTO `patients` (`pid`, `email`, `name`, `gender`, `slot`, `disease`, `time`, `date`, `dept`, `number`, `ward_ward_id`) VALUES
-(2, 'anees1@gmail.com', 'anees1 rehman khan', 'Male1', 'evening1', 'cold1', '21:20:00', '2020-02-02', 'ortho11predict', '9874561110',1),
-(5, 'patient@gmail.com', 'patien', 'Male', 'morning', 'fevr', '18:06:00', '2020-11-18', 'Cardiologists', '9874563210',1),
-(7, 'patient@gmail.com', 'anees', 'Male', 'evening', 'cold', '22:18:00', '2020-11-05', 'Dermatologists', '9874563210',1),
-(8, 'patient@gmail.com', 'anees', 'Male', 'evening', 'cold', '22:18:00', '2020-11-05', 'Dermatologists', '9874563210',2),
-(9, 'aneesurrehman423@gmail.com', 'anees', 'Male', 'morning', 'cold', '17:27:00', '2020-11-26', 'Anesthesiologists', '9874563210',2),
-(10, 'anees@gmail.com', 'anees', 'Male', 'evening', 'fever', '16:25:00', '2020-12-09', 'Cardiologists', '9874589654',1),
-(15, 'khushi@gmail.com', 'khushi', 'Female', 'morning', 'corona', '20:42:00', '2021-01-23', 'Anesthesiologists', '9874563210',2),
-(16, 'khushi@gmail.com', 'khushi', 'Female', 'evening', 'fever', '15:46:00', '2021-01-31', 'Endocrinologists', '9874587496',1),
-(17, 'aneeqah@gmail.com', 'aneeqah', 'Female', 'evening', 'fever', '15:48:00', '2021-01-23', 'Endocrinologists', '9874563210',2);
+(2, 'anees1@gmail.com', 'anees1 rehman khan', 'Male1', 'evening1', 'cold1', '21:20:00', '2024-02-02', 'ortho11predict', '9874561110',1),
+(5, 'patient@gmail.com', 'patien', 'Male', 'morning', 'fevr', '18:06:00', '2024-11-18', 'Cardiologists', '9874563210',1),
+(7, 'patient@gmail.com', 'anees', 'Male', 'evening', 'cold', '22:18:00', '2024-11-05', 'Dermatologists', '9874563210',1),
+(8, 'patient@gmail.com', 'anees', 'Male', 'evening', 'cold', '22:18:00', '2024-11-05', 'Dermatologists', '9874563210',2),
+(9, 'aneesurrehman423@gmail.com', 'anees', 'Male', 'morning', 'cold', '17:27:00', '2024-11-26', 'Anesthesiologists', '9874563210',2),
+(10, 'anees@gmail.com', 'anees', 'Male', 'evening', 'fever', '16:25:00', '2024-12-09', 'Cardiologists', '9874589654',1),
+(15, 'khushi@gmail.com', 'khushi', 'Female', 'morning', 'corona', '20:42:00', '2024-01-23', 'Anesthesiologists', '9874563210',2),
+(16, 'khushi@gmail.com', 'khushi', 'Female', 'evening', 'fever', '15:46:00', '2024-01-31', 'Endocrinologists', '9874587496',1),
+(17, 'aneeqah@gmail.com', 'aneeqah', 'Female', 'evening', 'fever', '15:48:00', '2024-01-23', 'Endocrinologists', '9874563210',2);
 
 --
 -- Triggers `patients`
@@ -168,25 +162,25 @@ CREATE TABLE `trigr` (
 --
 
 INSERT INTO `trigr` (`tid`, `pid`, `email`, `name`, `action`, `timestamp`) VALUES
-(1, 12, 'anees@gmail.com', 'ANEES', 'PATIENT INSERTED', '2020-12-02 16:35:10'),
-(2, 11, 'anees@gmail.com', 'anees', 'PATIENT INSERTED', '2020-12-02 16:37:34'),
-(3, 10, 'anees@gmail.com', 'anees', 'PATIENT UPDATED', '2020-12-02 16:38:27'),
-(4, 11, 'anees@gmail.com', 'anees', 'PATIENT UPDATED', '2020-12-02 16:38:33'),
-(5, 12, 'anees@gmail.com', 'ANEES', 'Patient Deleted', '2020-12-02 16:40:40'),
-(6, 11, 'anees@gmail.com', 'anees', 'PATIENT DELETED', '2020-12-02 16:41:10'),
-(7, 13, 'testing@gmail.com', 'testing', 'PATIENT INSERTED', '2020-12-02 16:50:21'),
-(8, 13, 'testing@gmail.com', 'testing', 'PATIENT UPDATED', '2020-12-02 16:50:32'),
-(9, 13, 'testing@gmail.com', 'testing', 'PATIENT DELETED', '2020-12-02 16:50:57'),
-(10, 14, 'aneeqah@gmail.com', 'aneeqah', 'PATIENT INSERTED', '2021-01-22 15:18:09'),
-(11, 14, 'aneeqah@gmail.com', 'aneeqah', 'PATIENT UPDATED', '2021-01-22 15:18:29'),
-(12, 14, 'aneeqah@gmail.com', 'aneeqah', 'PATIENT DELETED', '2021-01-22 15:41:48'),
-(13, 15, 'khushi@gmail.com', 'khushi', 'PATIENT INSERTED', '2021-01-22 15:43:02'),
-(14, 15, 'khushi@gmail.com', 'khushi', 'PATIENT UPDATED', '2021-01-22 15:43:11'),
-(15, 16, 'khushi@gmail.com', 'khushi', 'PATIENT INSERTED', '2021-01-22 15:43:37'),
-(16, 16, 'khushi@gmail.com', 'khushi', 'PATIENT UPDATED', '2021-01-22 15:43:49'),
-(17, 17, 'aneeqah@gmail.com', 'aneeqah', 'PATIENT INSERTED', '2021-01-22 15:44:41'),
-(18, 17, 'aneeqah@gmail.com', 'aneeqah', 'PATIENT UPDATED', '2021-01-22 15:44:52'),
-(19, 17, 'aneeqah@gmail.com', 'aneeqah', 'PATIENT UPDATED', '2021-01-22 15:44:59');
+(1, 12, 'anees@gmail.com', 'ANEES', 'PATIENT INSERTED', '2024-12-02 16:35:10'),
+(2, 11, 'anees@gmail.com', 'anees', 'PATIENT INSERTED', '2024-12-02 16:37:34'),
+(3, 10, 'anees@gmail.com', 'anees', 'PATIENT UPDATED', '2024-12-02 16:38:27'),
+(4, 11, 'anees@gmail.com', 'anees', 'PATIENT UPDATED', '2024-12-02 16:38:33'),
+(5, 12, 'anees@gmail.com', 'ANEES', 'Patient Deleted', '2024-12-02 16:40:40'),
+(6, 11, 'anees@gmail.com', 'anees', 'PATIENT DELETED', '2024-12-02 16:41:10'),
+(7, 13, 'testing@gmail.com', 'testing', 'PATIENT INSERTED', '2024-12-02 16:50:21'),
+(8, 13, 'testing@gmail.com', 'testing', 'PATIENT UPDATED', '2024-12-02 16:50:32'),
+(9, 13, 'testing@gmail.com', 'testing', 'PATIENT DELETED', '2024-12-02 16:50:57'),
+(10, 14, 'aneeqah@gmail.com', 'aneeqah', 'PATIENT INSERTED', '2024-01-22 15:18:09'),
+(11, 14, 'aneeqah@gmail.com', 'aneeqah', 'PATIENT UPDATED', '2024-01-22 15:18:29'),
+(12, 14, 'aneeqah@gmail.com', 'aneeqah', 'PATIENT DELETED', '2024-01-22 15:41:48'),
+(13, 15, 'khushi@gmail.com', 'khushi', 'PATIENT INSERTED', '2024-01-22 15:43:02'),
+(14, 15, 'khushi@gmail.com', 'khushi', 'PATIENT UPDATED', '2024-01-22 15:43:11'),
+(15, 16, 'khushi@gmail.com', 'khushi', 'PATIENT INSERTED', '2024-01-22 15:43:37'),
+(16, 16, 'khushi@gmail.com', 'khushi', 'PATIENT UPDATED', '2024-01-22 15:43:49'),
+(17, 17, 'aneeqah@gmail.com', 'aneeqah', 'PATIENT INSERTED', '2024-01-22 15:44:41'),
+(18, 17, 'aneeqah@gmail.com', 'aneeqah', 'PATIENT UPDATED', '2024-01-22 15:44:52'),
+(19, 17, 'aneeqah@gmail.com', 'aneeqah', 'PATIENT UPDATED', '2024-01-22 15:44:59');
 
 -- --------------------------------------------------------
 
@@ -227,11 +221,6 @@ ALTER TABLE `doctors`
 ALTER TABLE `patients`
   ADD PRIMARY KEY (`pid`);
 
---
--- Indexes for table `test`
---
-ALTER TABLE `test`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `trigr`
@@ -275,19 +264,6 @@ ALTER TABLE `trigr`
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
-
--- ALTER TABLE ward
---     ADD CONSTRAINT ward_hospital_fk FOREIGN KEY ( hospital_hospital_id )
---         REFERENCES hospital ( hospital_id );
-
--- ALTER TABLE doctors
---     ADD CONSTRAINT doctor_ward_fk FOREIGN KEY ( ward_ward_id )
---         REFERENCES ward ( ward_id );
-
--- ALTER TABLE patients
---     ADD CONSTRAINT patient_ward_fk FOREIGN KEY ( ward_ward_id )
---         REFERENCES ward ( ward_id );
-
 
 
 

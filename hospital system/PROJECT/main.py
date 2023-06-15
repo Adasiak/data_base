@@ -1,12 +1,9 @@
-from flask import Flask,render_template,request,session,redirect,url_for,flash
+from flask import Flask,render_template,request,redirect,url_for,flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash,check_password_hash
 from flask_login import login_user,logout_user,login_manager,LoginManager
 from flask_login import login_required,current_user
-from flask_mail import Mail
-import json
-
 
 
 # MY db connection
@@ -19,29 +16,15 @@ app.secret_key='hmsprojects'
 login_manager=LoginManager(app)
 login_manager.login_view='login'
 
-# SMTP MAIL SERVER SETTINGS
-
-# app.config.update(
-#     MAIL_SERVER='smtp.gmail.com',
-#     MAIL_PORT='465',
-#     MAIL_USE_SSL=True,
-#     MAIL_USERNAME="add your gmail-id",
-#     MAIL_PASSWORD="add your gmail-password"
-# )
-# mail = Mail(app)
-
 
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
 
 
-
-
 # app.config['SQLALCHEMY_DATABASE_URL']='mysql://username:password@localhost/databas_table_name'
-app.config['SQLALCHEMY_DATABASE_URI']='mysql://root:@127.0.0.1:3306/hms2'
+app.config['SQLALCHEMY_DATABASE_URI']='mysql://root:@127.0.0.1:3306/hms3'
 db=SQLAlchemy(app)
-
 
 
 # here we will create db models that is tables
@@ -113,30 +96,6 @@ def hospital():
     if current_user.usertype=="Admin":
         query=Hospital.query.all()
         return render_template('hospital.html',query=query)
-    
-    # hospital=Hospital.query.all()
-    # if request.method=="POST":
-    #     hospital_id=request.form.get('hospital_id')
-    #     hospital_name=request.form.get('hospital_name')
-    #     adres=request.form.get('adres')
-    #     phone_number=request.form.get('phone_number')
-    #     email=request.form.get('email')
-    #     number=request.form.get('number')
-        # subject="HOSPITAL MANAGEMENT SYSTEM"
-  
-
-    #     # query=db.engine.execute(f"INSERT INTO `patients` (`email`,`name`,	`gender`,`slot`,`disease`,`time`,`date`,`dept`,`number`) VALUES ('{email}','{name}','{gender}','{slot}','{disease}','{time}','{date}','{dept}','{number}')")
-        # query=Hospital(
-        #     hospital_id=hospital_id,
-        #     hospital_name=hospital_name,
-        #     adres=adres,
-        #     phone_number=phone_number,
-        #     email=email,
-        #     number=number,
-        # )
-        # db.session.add(query)
-        # db.session.commit()
-    
 
 
 @app.route('/wards',methods=['POST','GET'])
@@ -149,9 +108,7 @@ def wards():
 
 @app.route('/add_wards',methods=['POST','GET'])
 def add_wards():
-
     if request.method=="POST":
-
         ward_name=request.form.get('ward_name')
         building=request.form.get('building')
         floor=request.form.get('floor')
@@ -160,11 +117,10 @@ def add_wards():
         maximum_capacity=request.form.get('maximum_capacity')
         hospital_hospital_id=request.form.get('hospital_hospital_id')        
         
-        # query=db.engine.execute(f"INSERT INTO `doctors` (`email`,`doctorname`,`dept`) VALUES ('{email}','{doctorname}','{dept}')")
         query=Ward(
             ward_name=ward_name,
             building=building,
-            floar=floor,
+            floor=floor,
             phone_number=phone_number,
             int_of_free_beds=int_of_free_beds,
             maximum_capacity=maximum_capacity,
@@ -182,17 +138,15 @@ def showdoctors():
     query=Doctors.query.all()
     return render_template('showdoctors.html',query=query)
 
+
 @app.route('/doctors',methods=['POST','GET'])
 def doctors():
-
     if request.method=="POST":
-
         email=request.form.get('email')
         doctorname=request.form.get('doctorname')
         dept=request.form.get('dept')
         ward_ward_id=request.form.get('wardid')
         
-        # query=db.engine.execute(f"INSERT INTO `doctors` (`email`,`doctorname`,`dept`) VALUES ('{email}','{doctorname}','{dept}')")
         query=Doctors(email=email,doctorname=doctorname,dept=dept,ward_ward_id=ward_ward_id)
         db.session.add(query)
         db.session.commit()
@@ -201,13 +155,10 @@ def doctors():
     return render_template('doctor.html')
 
 
-
 @app.route('/patients',methods=['POST','GET'])
 @login_required
 def patient():
-    # doct=db.engine.execute("SELECT * FROM `doctors`")
     doct=Doctors.query.all()
-
     if request.method=="POST":
         email=request.form.get('email')
         name=request.form.get('name')
@@ -218,26 +169,14 @@ def patient():
         date=request.form.get('date')
         dept=request.form.get('dept')
         number=request.form.get('number')
-        # subject="HOSPITAL MANAGEMENT SYSTEM"
+        ward_ward_id=request.form.get('ward_ward_id')
         if len(number)<10 or len(number)>10:
             flash("Please give 10 digit number")
             return render_template('patient.html',doct=doct)
-  
-
-        # query=db.engine.execute(f"INSERT INTO `patients` (`email`,`name`,	`gender`,`slot`,`disease`,`time`,`date`,`dept`,`number`) VALUES ('{email}','{name}','{gender}','{slot}','{disease}','{time}','{date}','{dept}','{number}')")
-        query=Patients(email=email,name=name,gender=gender,slot=slot,disease=disease,time=time,date=date,dept=dept,number=number)
+        query=Patients(email=email,name=name,gender=gender,slot=slot,disease=disease,time=time,date=date,dept=dept,number=number, ward_ward_id=ward_ward_id)
         db.session.add(query)
         db.session.commit()
-        
-        # mail starts from here
-
-        # mail.send_message(subject, sender=params['gmail-user'], recipients=[email],body=f"YOUR bOOKING IS CONFIRMED THANKS FOR CHOOSING US \nYour Entered Details are :\nName: {name}\nSlot: {slot}")
-
-
-
         flash("Booking Confirmed","info")
-
-
     return render_template('patient.html',doct=doct)
 
 
@@ -246,11 +185,9 @@ def patient():
 def bookings(): 
     em=current_user.email
     if current_user.usertype=="Doctor" or current_user.usertype=="Admin" :
-        # query=db.engine.execute(f"SELECT * FROM `patients`")
         query=Patients.query.all()
         return render_template('booking.html',query=query)
     else:
-        # query=db.engine.execute(f"SELECT * FROM `patients` WHERE email='{em}'")
         query=Patients.query.filter_by(email=em)
         print(query)
         return render_template('booking.html',query=query)
@@ -293,7 +230,6 @@ def edit_doctor(did):
         doctorname=request.form.get('doctorname')
         dept=request.form.get('dept')
         ward_ward_id=request.form.get('ward_ward_id')
-        # db.engine.execute(f"UPDATE `patients` SET `email` = '{email}', `name` = '{name}', `gender` = '{gender}', `slot` = '{slot}', `disease` = '{disease}', `time` = '{time}', `date` = '{date}', `dept` = '{dept}', `number` = '{number}' WHERE `patients`.`pid` = {pid}")
         post=Doctors.query.filter_by(did=did).first()
         post.email=email
         post.doctorname=doctorname
@@ -321,7 +257,7 @@ def edit(pid):
         date=request.form.get('date')
         dept=request.form.get('dept')
         number=request.form.get('number')
-        # db.engine.execute(f"UPDATE `patients` SET `email` = '{email}', `name` = '{name}', `gender` = '{gender}', `slot` = '{slot}', `disease` = '{disease}', `time` = '{time}', `date` = '{date}', `dept` = '{dept}', `number` = '{number}' WHERE `patients`.`pid` = {pid}")
+        ward_ward_id=request.form.get('ward_ward_id')
         post=Patients.query.filter_by(pid=pid).first()
         post.email=email
         post.name=name
@@ -332,6 +268,7 @@ def edit(pid):
         post.date=date
         post.dept=dept
         post.number=number
+        post.ward_ward_id=ward_ward_id
         db.session.commit()
 
         flash("Slot is Updates","success")
@@ -344,17 +281,16 @@ def edit(pid):
 @app.route("/delete_doctor/<string:did>",methods=['POST','GET'])
 @login_required
 def delete_doctor(did):
-    # db.engine.execute(f"DELETE FROM `patients` WHERE `patients`.`pid`={pid}")
     query=Doctors.query.filter_by(did=did).first()
     db.session.delete(query)
     db.session.commit()
     flash("Slot Deleted Successful","danger")
     return redirect('/showdoctors')
 
+
 @app.route("/delete/<string:pid>",methods=['POST','GET'])
 @login_required
 def delete(pid):
-    # db.engine.execute(f"DELETE FROM `patients` WHERE `patients`.`pid`={pid}")
     query=Patients.query.filter_by(pid=pid).first()
     db.session.delete(query)
     db.session.commit()
@@ -375,16 +311,13 @@ def signup():
             flash("Email Already Exist","warning")
             return render_template('/signup.html')
 
-        # new_user=db.engine.execute(f"INSERT INTO `user` (`username`,`usertype`,`email`,`password`) VALUES ('{username}','{usertype}','{email}','{encpassword}')")
         myquery=User(username=username,usertype=usertype,email=email,password=encpassword)
         db.session.add(myquery)
         db.session.commit()
         flash("Signup Succes Please Login","success")
         return render_template('login.html')
-
-          
-
     return render_template('signup.html')
+
 
 @app.route('/login',methods=['POST','GET'])
 def login():
@@ -392,19 +325,13 @@ def login():
         email=request.form.get('email')
         password=request.form.get('password')
         user=User.query.filter_by(email=email).first()
-
         if user and check_password_hash(user.password,password):
             login_user(user)
             flash("Login Success","primary")
             return redirect(url_for('index'))
         else:
             flash("invalid credentials","danger")
-            return render_template('login.html')    
-
-
-
-
-
+            return render_template('login.html')   
     return render_template('login.html')
 
 @app.route('/logout')
@@ -415,12 +342,10 @@ def logout():
     return redirect(url_for('login'))
 
 
-
 @app.route('/details')
 @login_required
 def details():
     posts=Trigr.query.all()
-    # posts=db.engine.execute("SELECT * FROM `trigr`")
     return render_template('trigers.html',posts=posts)
 
 
@@ -432,16 +357,10 @@ def search():
         dept=Doctors.query.filter_by(dept=query).first()
         name=Doctors.query.filter_by(doctorname=query).first()
         if name:
-
             flash("Doctor is Available","info")
         else:
-
             flash("Doctor is Not Available","danger")
     return render_template('index.html')
-
-
-
-
 
 
 app.run(debug=True)    

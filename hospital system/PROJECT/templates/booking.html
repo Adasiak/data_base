@@ -34,8 +34,7 @@ Booking
       <th scope="col">TIME</th>
       <th scope="col">D.DEPARTMENT</th>
       <th scope="col">PHONE NUMBER</th>
-      <th scope="col">EDIT</th>
-      <th scope="col">DELETE</th>
+      <th scope="col">WARD ID</th>
 
     </tr>
   </thead>
@@ -52,6 +51,7 @@ Booking
       <td>{{post.time}}</td>
       <td>{{post.dept}}</td>
       <td>{{post.number}}</td>
+      <td>{{post.ward_ward_id}}</td>
     <td><a href="/edit/{{post.pid}}"><button class="btn btn-success">Edit </button> </a> </td>
     <td><a href="/delete/{{post.pid}}"><button onclick="return confirm('Are you sure to Delete data');" class="btn btn-success">Delete </button> </a> </td>
     </tr>
